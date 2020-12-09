@@ -5,8 +5,8 @@
   "dependencies": {
     "@emotion/cache": "latest",
     "@emotion/react": "latest",
-    "@emotion/styled": "latest",
     "@emotion/server": "latest",
+    "@emotion/styled": "latest",
     "@material-ui/core": "next",
     "clsx": "latest",
     "next": "latest",
@@ -15,14 +15,16 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
+    "deploy": "gh-pages -d out",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "gh-pages": "^3.1.0",
     "typescript": "latest"
   }
 }
